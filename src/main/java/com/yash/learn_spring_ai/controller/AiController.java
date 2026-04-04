@@ -34,7 +34,14 @@ public class AiController {
 
     @GetMapping("/store-embedding")
     public String storeEmbedding(){
-        aiService.storeEmbedding("This is sample test");
+        aiService.storeEmbedding();
         return "Embedding stored successfully!";
+    }
+
+    @GetMapping("/ask")
+    public String askAi(){
+        String response = aiService.askAi("What is the capital of France?");
+        System.out.println("AI Response: " + response);
+        return response;
     }
 }
