@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.yash.learn_spring_ai.service.AiPdfReaderService;
 import com.yash.learn_spring_ai.service.AiService;
 
 @RestController
@@ -13,6 +14,9 @@ public class AiController {
 
     @Autowired
     private AiService aiService;
+
+    @Autowired
+    private AiPdfReaderService AiPdfReaderService;
 
     @GetMapping("/prompt")
     public String getResponse(){
@@ -41,6 +45,13 @@ public class AiController {
     @GetMapping("/ask")
     public String askAi(){
         String response = aiService.askAi("What is the capital of France?");
+        System.out.println("AI Response: " + response);
+        return response;
+    }
+
+    @GetMapping("/ingest-pdf")
+    public String ingestPdf(){
+        String response = AiPdfReaderService.ingestPdfToVectorStore();
         System.out.println("AI Response: " + response);
         return response;
     }
