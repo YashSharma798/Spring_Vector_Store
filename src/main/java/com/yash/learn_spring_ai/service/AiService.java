@@ -101,7 +101,7 @@ public class AiService {
         var chatClientResponse = chatClient.prompt().
             user(renderedPrompt).
             call().
-            chatClientResponse();
+            chatClientResponse();    // To get all info like, token usage, response time, etc.
 
 
         System.out.println("Chat Client Response: " + chatClientResponse);
