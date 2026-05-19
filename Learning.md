@@ -43,3 +43,5 @@ SimpleLoggerAdvisor     (logs response)
 Response
 
 Note- You can control order using .order() method on each advisor.
+
+# Tool calling- 

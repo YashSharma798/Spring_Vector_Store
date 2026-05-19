@@ -4,7 +4,7 @@ docker-compose -f filename.yml up -d
 
 ==========
 
-How to start application locally- 
+# How to start application locally- 
 
 1) Run/Start the postgres server.
 
@@ -13,7 +13,9 @@ How to start application locally-
 3) Now, run springboot application via command- mvn spring-boot:run
 
 
-Check AI-Model configuration- 
+# Check AI-Model configuration- 
+
+# Docs: https://ollama.com/library
 
 ollama list ( To get list of all installed AI models)
 
